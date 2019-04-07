@@ -1,0 +1,23 @@
+Structural:
+  HMC using reversediff.
+    How?
+    Construct dict of values for continuous variables --- hashtable going from RV object id to call.
+  Particle Gibbs annealing.
+
+Convergence diagnostics:
+  trace plot
+  autocorrelation
+  histogram
+  implementation
+    @samples(1000, :a, :b, :c)
+
+Optimization:
+  Collapse deterministic functions?
+  Use deterministic functions from numeric_extensions for speed?  (No function lookup).
+
+Extend libraries:
+  Vectors:
+    IID(dist, dims)
+    Joint(dist1, dist2...)
+    Joint(dists)
+  When lifting functions, allow Array{Sample} to be passed into deterministic function
